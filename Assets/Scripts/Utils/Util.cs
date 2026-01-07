@@ -8,9 +8,7 @@ public class Util
     {
         T component = go.GetComponent<T>();
         if (component == null)
-        {
             component = go.AddComponent<T>();
-        }
         return component;
     }
 

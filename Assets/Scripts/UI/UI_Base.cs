@@ -1,12 +1,16 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UI_Base : MonoBehaviour
+public abstract class UI_Base : MonoBehaviour
 {
     Dictionary<Type, UnityEngine.Object[]> _objects = new Dictionary<Type, UnityEngine.Object[]>();
+
+    public abstract void Init();
+
 
     // ·¦ÇÎ ÇÔ¼ö
     protected Text GetText(int index) { return Get<Text>(index); }
@@ -42,8 +46,8 @@ public class UI_Base : MonoBehaviour
     public static void AddUIEvent(GameObject go, Action<PointerEventData> action, Define.UIEvent type = Define.UIEvent.Click)
     {
         UI_EventHandler evt = Util.GetOrAddComponent<UI_EventHandler>(go);
-        
-        switch(type)
+
+        switch (type)
         {
             case Define.UIEvent.Click:
                 evt.OnClickHandler += action;

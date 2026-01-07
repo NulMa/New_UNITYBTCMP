@@ -1,0 +1,20 @@
+{
+    "asset": "715e6dbd20682334dad8d1ecf2b9ebaf",
+    "fileName": "019b911a-7e1c-7871-a159-f224d2981c21.png",
+    "prompt": "chibi, anime, girl, modern, tech_wear",
+    "negativePrompt": "",
+    "model": "409229d8-9653-42a8-b069-824d11ef6762",
+    "modelName": "8-bit Pixel",
+    "customSeed": -1,
+    "w3CTraceId": "840fdfac890028d9b7757c574a904f87",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}
