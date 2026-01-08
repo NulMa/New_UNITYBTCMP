@@ -1,14 +1,26 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TitleScene : MonoBehaviour
+public class TitleScene : BaseScene
 {
-    void Start()
+    protected override void Init()
     {
-        
+        base.Init();
+        SceneType = Define.Scene.Title;
     }
 
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Managers.Scene.LoadScene(Define.Scene.Game);
+            //Managers.Scene.LoadScene(Define.Scene.Game);
+            //SceneManager.LoadScene("Game");
+        }
+    }
+
+    public override void Clear()
+    {
+        Logger.Log("TitleScene Clear");
     }
 }

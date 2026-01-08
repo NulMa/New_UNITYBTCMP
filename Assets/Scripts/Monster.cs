@@ -2,14 +2,10 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-    }
+    public AudioClip clip;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        Managers.Sound.Play(Define.Sound.Effect, "univ0001");
     }
 }
